@@ -7,7 +7,7 @@ from tests.tools.logger import get_test_logger
 logger = get_test_logger("USERS_ASSERTIONS")
 
 @allure.step("Check user")
-def assert_user(actual: User, expected: User):
+def assert_user(actual: User, expected: User) -> None:
     logger.info("Check user")
 
     assert_equal(actual.id, expected.id, "id")
